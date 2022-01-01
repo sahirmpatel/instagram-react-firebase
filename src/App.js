@@ -1,23 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
-
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      Hello bitch, nice TITS ahahahahah milky millky milky baby thirsty mommy
+      baby want milk suck suck suck suck hahahaha stupid cunt give me those big
+      udders you slut hahahaha tits tit titty me your caveman me use big titty
+      for big bitty hahaha honk honk honk slut cunt mommy honk honk milky baby
+      want more now honk honk honk pitter patter on those big mommy milkies hee
+      hee hee haha haaaa haaaa can’t stop the milk truck coming through honk
+      honk all aboard the titty train hee hee woo woooooo honk honk honk!!!
     </div>
   );
 }
