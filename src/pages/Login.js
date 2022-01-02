@@ -2,23 +2,35 @@ import { Link } from "react-router-dom";
 import React, { useContext, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import FirebaseContext from "../context/firebase";
+import * as ROUTES from "../constants/routes";
 
 const Login = () => {
   const history = useNavigate();
-  const firebase = useContext(FirebaseContext);
+  const {
+    firebase: { firebase },
+  } = useContext(FirebaseContext);
+  console.log("firebase:", firebase);
 
   const [emailAddress, setEmailAddress] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const isInvalid = password === "" || emailAddress === "";
 
-  const handleLogin = () => {};
+  const handleLogin = async (event) => {
+    event.preventDefault();
+    try {
+      await firebase.auth().signInWithEmailAndPassword(emailAddress, password);
+      history(ROUTES.DASHBOARD);
+    } catch (error) {
+      setEmailAddress("");
+      setPassword("");
+      setError(error.message);
+    }
+  };
 
   useEffect(() => {
     document.title = "Login - Instagram";
   }, []);
-
-  // 1:47:
 
   return (
     <div className="container flex mx-auto max-w-screen-md items-center h-screen">
